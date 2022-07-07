@@ -10,8 +10,9 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kemockui.R
 import com.example.kemockui.databinding.MainFragmentBinding
-import com.example.kemockui.model.repository.CalendarRepository.currentDateTime
+import com.example.kemockui.databinding.MainFragmentOnePageBinding
 import com.example.kemockui.model.repository.RepositoryRvHomework
+import com.example.kemockui.ui.main.pages.MainFragmentOnePage
 
 class MainFragment : Fragment() {
 
@@ -51,28 +52,38 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        childFragmentManager.beginTransaction()
+            .replace(R.id.bottom_container, MainFragmentOnePage())
+            .commitAllowingStateLoss()
 
-        binding.rvHomework.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-
-        val adapterHomework = RvAdapterCommon()
-        binding.rvHomework.adapter = adapterHomework
-
-        adapterHomework.adapterList = RepositoryRvHomework.getListRvHomework()
-
-        viewModel.liveDataCurrentTime.observe(viewLifecycleOwner, Observer { time ->
-            binding.areYouReady.text = time
-            binding.count1.text = time.substring(8,9)
-            binding.count2.text = time.substring(9,10)
-            binding.count3.text = time.substring(11,12)
-            binding.count4.text = time.substring(12,13)
-            binding.count5.text = time.substring(14,15)
-            binding.count6.text = time.substring(15,16)
-            binding.count7sec.text = time.substring(17,18)
-            binding.count8sec.text = time.substring(18,19)
-        })
-
-        viewModel.updateCurrentTime()
-
+        binding.bottomNavigationView.setOnNavigationItemSelectedListener() { item ->
+            when (item.itemId) {
+                R.id.bottom_item_one -> {
+                    childFragmentManager.beginTransaction()
+                        .replace(R.id.bottom_container, MainFragmentOnePage())
+                        .commitAllowingStateLoss()
+                    true
+                }
+//                R.id.bottom_item_two -> {
+//                    childFragmentManager.beginTransaction()
+//                        .replace(R.id.bottom_container, ItemTwoFragment())
+//                        .commitAllowingStateLoss()
+//                    true
+//                }
+//                R.id.bottom_item_three -> {
+//                    childFragmentManager.beginTransaction()
+//                        .replace(R.id.bottom_container, ItemThreeFragment())
+//                        .commitAllowingStateLoss()
+//                    true
+//                }
+                else -> {
+                    childFragmentManager.beginTransaction()
+                        .replace(R.id.bottom_container, MainFragmentOnePage())
+                        .commitAllowingStateLoss()
+                    true
+                }
+            }
+        }
     }
 
 }
