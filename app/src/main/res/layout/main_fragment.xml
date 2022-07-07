@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".ui.main.MainFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="?attr/colorPrimary"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:liftOnScroll="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/main_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:menu="@menu/main_top_appbar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+            app:title="@string/hi_mike" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_margin="@dimen/margin_big_cardview"
+        app:cardBackgroundColor="?attr/colorSecondary"
+        app:cardCornerRadius="@dimen/corner_radius_big_cardview"
+        app:cardElevation="@dimen/elevation_cardview"
+        app:strokeWidth="@dimen/stroke_cardview">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/are_you_ready"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/are_you_ready_for_exams"
+                android:textSize="@dimen/size_title_normal"
+                android:textStyle="bold" />
+            <!--            android:textAppearance="?attr/textAppearanceHeadline6"-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView style="@style/small_card_view">
+
+                    <TextView
+                        android:id="@+id/count1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/margin_text_in_cardview"
+                        android:text="@string/zero"
+                        android:textAppearance="?attr/textAppearanceHeadline6" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView style="@style/small_card_view">
+
+                    <TextView
+                        android:id="@+id/count2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/margin_text_in_cardview"
+                        android:text="@string/zero"
+                        android:textAppearance="?attr/textAppearanceHeadline6" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_text"
+                    android:text="@string/colon"
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                <com.google.android.material.card.MaterialCardView style="@style/small_card_view">
+
+                    <TextView
+                        android:id="@+id/count3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/margin_text_in_cardview"
+                        android:text="@string/zero"
+                        android:textAppearance="?attr/textAppearanceHeadline6" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView style="@style/small_card_view">
+
+                    <TextView
+                        android:id="@+id/count4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/margin_text_in_cardview"
+                        android:text="@string/zero"
+                        android:textAppearance="?attr/textAppearanceHeadline6" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_text"
+                    android:text="@string/colon"
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                <com.google.android.material.card.MaterialCardView style="@style/small_card_view">
+
+                    <TextView
+                        android:id="@+id/count5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/margin_text_in_cardview"
+                        android:text="@string/zero"
+                        android:textAppearance="?attr/textAppearanceHeadline6" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView style="@style/small_card_view">
+
+                    <TextView
+                        android:id="@+id/count6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/margin_text_in_cardview"
+                        android:text="@string/zero"
+                        android:textAppearance="?attr/textAppearanceHeadline6" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_text"
+                    android:text="@string/colon"
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                <com.google.android.material.card.MaterialCardView style="@style/small_card_view">
+
+                    <TextView
+                        android:id="@+id/count7sec"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/margin_text_in_cardview"
+                        android:text="@string/zero"
+                        android:textAppearance="?attr/textAppearanceHeadline6" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView style="@style/small_card_view">
+
+                    <TextView
+                        android:id="@+id/count8sec"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/margin_text_in_cardview"
+                        android:text="@string/zero"
+                        android:textAppearance="?attr/textAppearanceHeadline6" />
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/margin_d_h_m"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_text_in_cardview"
+                    android:gravity="center"
+                    android:text="@string/days" />
+
+                <TextView
+                    android:layout_width="@dimen/margin_d_h_m"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_text_in_cardview"
+                    android:gravity="center"
+                    android:text="@string/hours" />
+
+                <TextView
+                    android:layout_width="@dimen/margin_d_h_m"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_text_in_cardview"
+                    android:gravity="center"
+                    android:text="@string/minutes" />
+
+                <TextView
+                    android:layout_width="@dimen/margin_d_h_m"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_text_in_cardview"
+                    android:gravity="center"
+                    android:text="@string/seconds" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_classes"
+        style="@style/heading_text_style"
+        android:text="@string/classes" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_margin="@dimen/margin_big_cardview"
+        app:cardBackgroundColor="?attr/colorPrimaryVariant"
+        app:cardCornerRadius="@dimen/corner_radius_big_cardview"
+        app:cardElevation="@dimen/elevation_cardview"
+        app:strokeWidth="@dimen/stroke_cardview"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:src="@drawable/ic_avatar"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/are_you_ready_for_exams"
+                android:textSize="@dimen/size_title_normal"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/colorTertiary"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:rotation="90"
+                    android:gravity="center"
+                    android:layout_margin="-20dp"
+                    android:padding="-20dp"
+                    android:text="@string/are_you_ready_for_exams"
+                    android:textSize="@dimen/size_title_normal"
+                    android:textStyle="bold"
+                    />
+            </FrameLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_homework"
+        style="@style/heading_text_style"
+        android:text="@string/homework" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_homework"
+        style="@style/padding_start_top_end_normal_rv"
+        android:orientation="horizontal"
+        />
+
+
+
+
+</LinearLayout>

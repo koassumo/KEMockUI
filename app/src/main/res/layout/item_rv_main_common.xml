@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    android:layout_width="175dp"
+    android:layout_height="140dp"
+    android:layout_marginEnd="@dimen/step_between_rv_items_normal"
+    app:cardBackgroundColor="?attr/colorPrimaryVariant"
+    app:cardCornerRadius="@dimen/radius_large"
+    app:cardElevation="@dimen/elevation_small"
+    app:strokeWidth="@dimen/stroke_width_normal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/step_normal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/step_start_normal"
+                android:paddingEnd="@dimen/step_start_normal"
+                android:paddingBottom="@dimen/step_bottom_small"
+                android:text="@string/description"
+                android:textSize="@dimen/text_size_normal" />
+
+            <ImageView
+                android:id="@+id/iv_pic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/step_large"
+                android:contentDescription="@string/description"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_avatar" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/step_start_normal"
+            android:paddingEnd="@dimen/step_start_normal"
+            android:paddingBottom="@dimen/step_bottom_small"
+            android:text="@string/description"
+            android:textColor="?attr/colorOnTertiary"
+            android:textSize="@dimen/text_size_normal" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

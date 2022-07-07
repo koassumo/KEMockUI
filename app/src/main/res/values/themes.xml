@@ -1,0 +1,97 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.KEMockUI" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <!-- no colorPrimaryLight without reasons (there's on material.io), so colorPrimaryVariant -->
+        <item name="colorPrimaryVariant">@color/grey_800</item>
+        <!-- why is not textColor the same as colorOnPrimary?      -->
+        <item name="android:textColor">@color/white</item>
+        <!-- Color background in cardview      -->
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- secondary for FAB etc.-->
+        <item name="colorSecondary">@color/green_600</item>
+        <item name="colorSecondaryVariant">#40616161</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- tertiary for gradient etc.-->
+        <item name="colorTertiary">@color/blue_600</item>
+        <item name="colorOnTertiary">@color/deep_orange_900</item>
+
+        <!-- rv background-->
+        <item name="colorSurface">@color/grey_200</item>
+
+        <!-- Status bar color. (по умолчанию также colorPrimaryDark) -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+<!--        <item name="android:windowBackground">?attr/myColorPrimaryLight</item>-->
+        <!-- Color background (not main)       -->
+        <!--        <item name="myColorPrimaryLight">@color/blue_200</item>-->
+
+    </style>
+
+    <style name="small_card_view" >
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadline5</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin_small_cardview</item>
+        <item name="cardCornerRadius">@dimen/corner_radius_small_cardview</item>
+        <item name="strokeWidth">@dimen/stroke_cardview</item>
+        <item name="cardElevation">@dimen/elevation_cardview</item>
+        <item name="cardBackgroundColor">?attr/colorSecondaryVariant</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="heading_text_style" >
+
+        <item name="android:textAppearance">?attr/textAppearanceHeadline6</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margin_title</item>
+        <item name="android:layout_marginStart">@dimen/margin_big_cardview</item>
+        <item name="cardCornerRadius">@dimen/corner_radius_small_cardview</item>
+        <item name="strokeWidth">@dimen/stroke_cardview</item>
+        <item name="cardElevation">@dimen/elevation_cardview</item>
+        <item name="cardBackgroundColor">?attr/colorSecondaryVariant</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!--    для rv в частности нужен именно padding для start и end,
+        и также android:clipToPadding="false" для движения в этом padding -->
+    <!--    ВНИМАНИЕ !!! Отсутствие нижнего padding - СЪЕДАЕТ ТЕНЬ у RV !!!!!!!!!-->
+    <style name="padding_start_top_end_normal_rv">
+        <item name="android:paddingTop">@dimen/step_top_normal</item>
+        <item name="android:paddingStart">@dimen/step_start_normal</item>
+        <item name="android:paddingEnd">@dimen/step_end_normal</item>
+        <item name="android:paddingBottom">@dimen/step_end_normal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+
+
+    <!-- transparent for # _ _ 000000
+    100% — FF
+    95% — F2
+    90% — E6
+    85% — D9
+    80% — CC
+    75% — BF
+    70% — B3
+    65% — A6
+    60% — 99
+    55% — 8C
+    50% — 80
+    45% — 73
+    40% — 66
+    35% — 59
+    30% — 4D
+    25% — 40
+    20% — 33
+    15% — 26
+    10% — 1A
+    5%  — 0D
+    0% —  00  full transparent
+    -->
+</resources>

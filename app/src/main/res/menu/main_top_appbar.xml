@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search_ic"
+        android:icon="@drawable/ic_baseline_search_32"
+        android:title="@string/hi_mike"
+        android:contentDescription="@string/description"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/settings_ic"
+        android:icon="@drawable/ic_baseline_settings_32"
+        android:title="@string/hi_mike"
+        android:contentDescription="@string/description"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/avatar_ic"
+        android:icon="@drawable/ic_avatar"
+        android:title="@string/hi_mike"
+        android:contentDescription="@string/description"
+        app:showAsAction="ifRoom" />
+</menu>
