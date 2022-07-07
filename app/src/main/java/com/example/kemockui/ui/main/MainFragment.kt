@@ -72,11 +72,6 @@ class MainFragment : Fragment() {
         })
 
         viewModel.updateCurrentTime()
-        //binding.areYouReady.text = currentDateTime.toString()
-
-//        viewModel.liveDataAPOD.observe(viewLifecycleOwner, Observer {
-//            adapterAPOD.adapterList = it       // вызов set в адаптере
-//        })
 
     }
 
