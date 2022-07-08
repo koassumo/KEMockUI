@@ -68,16 +68,13 @@
     <dimen name="price">13dp</dimen>
 
 
-
-
-
     <dimen name="margin_big_cardview">20dp</dimen>
-    <dimen name="margin_small_cardview">2dp</dimen>
+    <dimen name="margin_small_cardview">4dp</dimen>
     <dimen name="margin_title">12dp</dimen>
     <dimen name="margin_text_in_cardview">8dp</dimen>
     <dimen name="margin_text">2dp</dimen>
     <dimen name="corner_radius_big_cardview">28dp</dimen>
-    <dimen name="stroke_cardview">0dp</dimen>
+    <dimen name="stroke_cardview">1dp</dimen>
     <dimen name="elevation_cardview">0dp</dimen>
     <dimen name="size_title_normal">16sp</dimen>
     <dimen name="corner_radius_small_cardview">8dp</dimen>

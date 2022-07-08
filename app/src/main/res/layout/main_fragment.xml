@@ -33,7 +33,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="130dp"
         android:layout_margin="@dimen/margin_big_cardview"
         app:cardBackgroundColor="?attr/colorSecondary"
         app:cardCornerRadius="@dimen/corner_radius_big_cardview"
@@ -219,58 +219,11 @@
         style="@style/heading_text_style"
         android:text="@string/classes" />
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card2"
-        android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:layout_margin="@dimen/margin_big_cardview"
-        app:cardBackgroundColor="?attr/colorPrimaryVariant"
-        app:cardCornerRadius="@dimen/corner_radius_big_cardview"
-        app:cardElevation="@dimen/elevation_cardview"
-        app:strokeWidth="@dimen/stroke_cardview"
-        >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp"
-                android:gravity="center"
-                android:src="@drawable/ic_avatar"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp"
-                android:gravity="center"
-                android:text="@string/are_you_ready_for_exams"
-                android:textSize="@dimen/size_title_normal"
-                android:textStyle="bold" />
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="?attr/colorTertiary"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:rotation="90"
-                    android:gravity="center"
-                    android:layout_margin="-20dp"
-                    android:padding="-20dp"
-                    android:text="@string/are_you_ready_for_exams"
-                    android:textSize="@dimen/size_title_normal"
-                    android:textStyle="bold"
-                    />
-            </FrameLayout>
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_lessons"
+        style="@style/padding_start_top_end_normal_rv"
+        android:orientation="horizontal"
+        />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/title_homework"
