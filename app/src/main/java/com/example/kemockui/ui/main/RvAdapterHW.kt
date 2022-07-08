@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kemockui.databinding.ItemRvMainCommonBinding
 import com.example.kemockui.entities.ItemHomework
-import com.example.kemockui.entities.ItemLesson
 
 class RvAdapterHW(
     //private val onItemClickListener: (ItemRv) -> Unit
@@ -31,7 +30,6 @@ class RvAdapterHW(
         fun bind(adapterItemView: ItemHomework) {
             viewBinding.tvTitle.text = adapterItemView.title
             viewBinding.tvLeft.text = adapterItemView.beginTime
-
 
         }
     }

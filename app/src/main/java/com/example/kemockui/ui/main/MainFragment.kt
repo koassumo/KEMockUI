@@ -22,27 +22,18 @@ class MainFragment : Fragment() {
 
     private val adapterLessons: RvAdapterLesson by lazy { RvAdapterLesson () }
     private val adapterHomework: RvAdapterHW by lazy { RvAdapterHW () }
-    // Тут BINDING for fragments (для активити все проще)
-    // 1. Сделать запись в gradle
-    // 2. Создаем вспомогательный объект
+
     private var _binding: MainFragmentBinding? = null
-
-    // 3. Создаем объект
     private val binding get() = _binding!!
-
-    // 4. занулить вспомогательный binding здесь
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
     }
-    // 5. см. ниже добавить строки в onCreateView
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // 5. изменение для binding здесь:
         val view = inflater.inflate(R.layout.main_fragment, container, false)
         _binding = MainFragmentBinding.bind(view)
         return binding.root
@@ -67,10 +58,9 @@ class MainFragment : Fragment() {
             binding.count7sec.text = periodToExam.substring(17,18)
             binding.count8sec.text = periodToExam.substring(18,19)
         })
-
         viewModel.updateCurrentTime()
 
-
+//rv lessons
         binding.rvLessons.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         binding.rvLessons.adapter = adapterLessons
         val listLessons = RepositoryRv.getListRvLessons()
@@ -82,6 +72,7 @@ class MainFragment : Fragment() {
         }
         binding.rvLessons.getLayoutManager()?.scrollToPosition(positionInTheAdapter)
 
+//rv homework
         binding.rvHomework.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         binding.rvHomework.adapter = adapterHomework
         adapterHomework.adapterList = RepositoryRv.getListRvHomework()

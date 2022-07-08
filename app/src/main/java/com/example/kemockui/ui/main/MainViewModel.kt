@@ -12,7 +12,6 @@ class MainViewModel : ViewModel() {
     val liveDataExamTime = MutableLiveData <String>()
     val liveDataPeriodToExam = MutableLiveData <String>()
 
-
     fun updateCurrentTime () {
 
         val examDateTime: String = CalendarRepository.getExamDateTimeString()

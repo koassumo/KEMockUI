@@ -4,7 +4,6 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kemockui.databinding.ItemRvMainCommonBinding
 import com.example.kemockui.databinding.ItemRvMainLessonBinding
 import com.example.kemockui.entities.ItemLesson
 
